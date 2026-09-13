@@ -8,14 +8,12 @@ public class BaseUser {
     private String name;
     private String cpf;
     private String phone;
-    private String created_at; // TODO: change to Date type
 
-    public BaseUser(int id, String name, String cpf, String phone, String created_at) {
+    public BaseUser(int id, String name, String cpf, String phone) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.phone = phone;
-        this.created_at = created_at;
     }
 
     public int getId() {
@@ -28,10 +26,6 @@ public class BaseUser {
 
     public String getCpf() {
         return cpf;
-    }
-
-    public String getCreatedAt() {
-        return created_at;
     }
 
     public String getPhone() {
@@ -52,9 +46,5 @@ public class BaseUser {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
     }
 }
