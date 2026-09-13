@@ -37,4 +37,24 @@ public class BaseUser {
     public String getPhone() {
         return phone;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
 }

@@ -1,3 +1,5 @@
+package br.com.fiap.dao.users;
+
 import br.com.fiap.entities.sale.BeforeSale;
 import br.com.fiap.entities.users.Salesman;
 import br.com.fiap.connection.ConnectionFactory;
@@ -20,6 +22,7 @@ public class SalesmanDao {
         ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
             BeforeSale sale = new BeforeSale();
+            sale.setId_sale(rs.getInt(1));
 
         }
         stmt.execute();

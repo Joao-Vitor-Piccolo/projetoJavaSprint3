@@ -1,3 +1,5 @@
+package br.com.fiap.dao.users;
+
 import br.com.fiap.entities.users.Manager;
 import br.com.fiap.connection.ConnectionFactory;
 
