@@ -18,6 +18,22 @@ public class SalesmanDao {
         this.myConnection = new ConnectionFactory().conn();
     }
 
+    public List<Salesman> buscarPorNome(String nome) throws SQLException {
+        PreparedStatement stmt = myConnection.prepareStatement(
+                "SELECT * FROM SALESMAN WHERE UPPER(NOME) = UPPER(?) ORDER BY ID_SALESMAN");
+        stmt.setString(1, nome);
+        ResultSet rs = stmt.executeQuery();
+        List<Salesman> salesmen = new ArrayList<>();
+        while (rs.next()) {
+            salesmen.add(new Salesman(
+                    rs.getInt("ID_SALESMAN"),
+                    rs.getString("NOME"),
+                    rs.getString("CPF"),
+                    rs.getString("TELEFONE")));
+        }
+        return salesmen;
+    }
+
     public List<Sale> listarSales(Salesman salesUser) throws SQLException {
         PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM SALE WHERE FK_SALESMAN = ?");
@@ -44,24 +60,28 @@ public class SalesmanDao {
 
     public String iniciarSale(int idSale, int idSalesman) throws SQLException {
         PreparedStatement stmt = myConnection.prepareStatement(
-                "UPDATE SALE SET IS_STARTED = 1 WHERE ID_SALE = ? AND FK_SALESMAN = ?");
+                "UPDATE SALE SET IS_STARTED = 1 "
+                        + "WHERE ID_SALE = ? AND FK_SALESMAN = ? "
+                        + "AND IS_STARTED = 0 AND IS_FINISHED = 0");
         stmt.setInt(1, idSale);
         stmt.setInt(2, idSalesman);
         int updated = stmt.executeUpdate();
         if (updated == 0) {
-            return "Sale nao encontrada para este salesman!";
+            return "Sale nao encontrada ou nao pode ser iniciada!";
         }
         return "Sale iniciada com sucesso!";
     }
 
     public String finalizarSale(int idSale, int idSalesman) throws SQLException {
         PreparedStatement stmt = myConnection.prepareStatement(
-                "UPDATE SALE SET IS_FINISHED = 1 WHERE ID_SALE = ? AND FK_SALESMAN = ?");
+                "UPDATE SALE SET IS_FINISHED = 1 "
+                        + "WHERE ID_SALE = ? AND FK_SALESMAN = ? "
+                        + "AND IS_STARTED = 1 AND IS_FINISHED = 0");
         stmt.setInt(1, idSale);
         stmt.setInt(2, idSalesman);
         int updated = stmt.executeUpdate();
         if (updated == 0) {
-            return "Sale nao encontrada para este salesman!";
+            return "Sale nao encontrada ou nao pode ser finalizada!";
         }
         return "Sale finalizada com sucesso!";
     }

@@ -2,9 +2,6 @@ package br.com.fiap.entities.sale;
 
 import java.sql.Date;
 
-/**
- * Sale
- */
 public class Sale {
     private Integer id_sale;
     private Integer fk_salesman;
@@ -14,6 +11,11 @@ public class Sale {
     private Date created_at;
 
     public Sale() {
+    }
+
+    public Sale(Integer fk_salesman, Integer fk_customer, Integer is_started,
+            Integer is_finished, Date created_at) {
+        this(null, fk_salesman, fk_customer, is_started, is_finished, created_at);
     }
 
     public Sale(Integer id_sale, Integer fk_salesman, Integer fk_customer,

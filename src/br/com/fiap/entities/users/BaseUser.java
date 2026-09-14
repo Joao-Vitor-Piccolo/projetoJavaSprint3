@@ -1,13 +1,14 @@
 package br.com.fiap.entities.users;
 
-/**
- * BaseUser
- */
 public class BaseUser {
     private int id;
     private String name;
     private String cpf;
     private String phone;
+
+    public BaseUser(String name, String cpf, String phone) {
+        this(0, name, cpf, phone);
+    }
 
     public BaseUser(int id, String name, String cpf, String phone) {
         this.id = id;
