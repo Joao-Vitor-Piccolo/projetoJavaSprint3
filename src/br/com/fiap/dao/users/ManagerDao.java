@@ -131,7 +131,7 @@ public class ManagerDao {
         List<Customer> customers = new ArrayList<>();
         try (PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM CUSTOMER ORDER BY ID_CUSTOMER");
-             ResultSet rs = stmt.executeQuery()) {
+                ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 customers.add(mapCustomer(rs));
             }
@@ -194,7 +194,7 @@ public class ManagerDao {
         List<Salesman> salesmen = new ArrayList<>();
         try (PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM SALESMAN ORDER BY ID_SALESMAN");
-             ResultSet rs = stmt.executeQuery()) {
+                ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 salesmen.add(mapSalesman(rs));
             }
@@ -270,7 +270,7 @@ public class ManagerDao {
         List<Sale> sales = new ArrayList<>();
         try (PreparedStatement stmt = myConnection.prepareStatement(
                 "SELECT * FROM SALE ORDER BY ID_SALE");
-             ResultSet rs = stmt.executeQuery()) {
+                ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 sales.add(mapSale(rs));
             }
