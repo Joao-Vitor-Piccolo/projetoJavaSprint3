@@ -1,0 +1,10 @@
+br/com/fiap/main/TesteCadastroManager.class
+br/com/fiap/entities/users/Salesman.class
+br/com/fiap/entities/users/Customer.class
+br/com/fiap/dao/users/SalesmanDao.class
+br/com/fiap/entities/users/BaseUser.class
+br/com/fiap/entities/sale/Sale.class
+br/com/fiap/dao/users/ManagerDao.class
+br/com/fiap/entities/users/Manager.class
+br/com/fiap/connection/ConnectionFactory.class
+br/com/fiap/main/TesteCadastroSalesman.class

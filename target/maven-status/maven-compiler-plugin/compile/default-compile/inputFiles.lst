@@ -1,0 +1,10 @@
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/entities/users/Customer.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/entities/users/BaseUser.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/entities/sale/Sale.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/dao/users/ManagerDao.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/main/TesteCadastroManager.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/entities/users/Salesman.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/entities/users/Manager.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/main/TesteCadastroSalesman.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/dao/users/SalesmanDao.java
+/home/joaopiccolo/programming/javaProjects/projetoJavaSprint3/src/br/com/fiap/connection/ConnectionFactory.java
