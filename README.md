@@ -1,11 +1,16 @@
 # Sistema de Gestão de Vendas
 
+**Documentação do Projeto — Sprint 3 (Java / JDBC / Oracle)**
+
+---
+
 ## Capa
 
 |                     |                                    |
 | ------------------- | ---------------------------------- |
 | **Nome da solução** | Sistema de Gestão de Vendas        |
-| **Nome da equipe**  | Equipe 5                           |
+| **Nome da equipe**  | Equipe Sprint 3                    |
+| **Instituição**     | FIAP                               |
 | **Disciplina**      | Java / Persistence (JDBC + Oracle) |
 
 ### Integrantes
@@ -17,6 +22,8 @@
 | Jéssica Domingues  | 562973 |
 | Kauã Carvalho      | 566371 |
 | Leonardo Pereira   | 561349 |
+
+> Ajuste **nome da equipe** e **nome da solução** se o grupo já tiver nomes oficiais definidos no Challenge.
 
 ---
 
@@ -35,12 +42,11 @@
 
 ## 1. Objetivo e escopo do projeto
 
-A solução proposta é um sistema desktop em Java para **gestão de vendedores, clientes e vendas**
+A solução proposta é um sistema desktop em Java para **gestão de vendedores, clientes e vendas**, com persistência em **Oracle Database** via **JDBC**.
 
 O sistema separa dois perfis de uso:
 
 - **Manager**: administra o cadastro de vendedores e clientes e cria/atualiza/exclui vendas, vinculando um vendedor a um cliente.
-
 - **Salesman**: consulta as próprias vendas e controla o ciclo operacional da venda (iniciar e finalizar).
 
 ### Escopo
